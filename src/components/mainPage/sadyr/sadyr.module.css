@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: -0.5rem;
+}
+
+.message {
+  border: 8px dashed #b31b1b; /* кастомный цвет */
+  border-radius: 8px; /* плавные углы */
+  padding: 2rem 4rem;
+  font-size: 1.3rem;
+  width: 509px;
+  font-weight: 600;
+}
+
+.text_block {
+  width: 609px;
+  font-size: 1.2rem;
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.text_block::before {
+  content: "";
+  width: 20px;
+  height: 150px;
+  background-color: #b31b1b;
+  margin-right: 3rem;
+}

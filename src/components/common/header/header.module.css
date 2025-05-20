@@ -1,0 +1,37 @@
+.header {
+  background-color: #b71c22;
+  /* display: flex; */
+}
+
+header {
+  padding: 15px 5rem;
+  display: flex;
+  color: #ffffff;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header a {
+  text-decoration: none;
+  height: auto;
+  font-weight: 800;
+  font-size: 1.7rem;
+  color: #ffffff;
+}
+
+.nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-left: 5rem;
+}
+
+.nav .btn {
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav .btn:hover {
+  color: #bdbdbd;
+}
