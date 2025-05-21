@@ -1,0 +1,105 @@
+@import "../../../styles/color-variables.css";
+
+.custom-input {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.custom-input__label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.custom-input__required {
+  color: #e74c3c;
+  margin-left: 0.25rem;
+}
+.custom-input__input--file {
+  border: 3px dashed #7c94c7 !important;
+  padding: 0.4rem;
+  cursor: pointer;
+  background-color: rgb(209, 209, 209);
+  display: flex;
+  place-items: center;
+}
+.custom-input__input--file::file-selector-button {
+  background-color: white;
+  border: none;
+}
+.custom-input__input,
+.custom-input__select {
+  padding: 0.5rem;
+  border: 3px solid #7c94c7;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.custom-input__input:focus,
+.custom-input__select:focus {
+  border-color: #007bff;
+}
+
+.custom-input__input--error {
+  border-color: #e74c3c;
+}
+
+.custom-input__error {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.togglePasswordBtn {
+  position: absolute;
+  right: 10px; /* Adjust to position inside the input field */
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+/* .custom-input__selected {
+  width: 100%;
+  grid-column: 1;
+} */
+
+.custom-input--search .custom-input__input {
+  background: #f6f8ff;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #7c94c71a;
+  padding: 0.9rem 2.8rem 0.9rem 1.2rem;
+  font-size: 1.1rem;
+  color: #25325c;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.custom-input--search .custom-input__input:focus {
+  outline: none;
+  box-shadow: 0 4px 18px #7c94c733;
+  border: 2px solid #7c94c7;
+}
+.custom-input--search .custom-input__input::placeholder {
+  color: #b2b9d2;
+  font-weight: 500;
+  opacity: 1;
+}
+.custom-input--search {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+.custom-input--search .search-icon {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  opacity: 0.7;
+}

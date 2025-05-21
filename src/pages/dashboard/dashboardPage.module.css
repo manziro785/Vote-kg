@@ -1,0 +1,109 @@
+.card {
+  border-radius: 10px;
+  padding: 60px;
+  background: #eaeeff;
+  box-shadow: 0 1px 4px #eaf0ff55;
+  margin-bottom: 2rem;
+}
+
+.title,
+.title_surv {
+  display: flex;
+  justify-content: space-between;
+}
+.title h4,
+.title_surv h4 {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.title p,
+.title_surv p {
+  margin-top: 0;
+  font-size: 0.8rem;
+  color: #7c94c7;
+  font-style: italic;
+}
+.title_surv {
+  display: flex;
+}
+.person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.person img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 2rem;
+}
+.btns div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btns img {
+  cursor: pointer;
+}
+.btns p {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #7c94c7;
+}
+.person p {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.person h5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.person p {
+  margin-top: 0;
+}
+.options {
+  margin-top: 2rem;
+}
+.option {
+  border: 2px solid #7c94c7;
+  padding: 22px;
+  border-radius: 10px;
+  display: flex;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.option h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.option_title {
+  margin-left: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions div {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #7c94c7;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.actions div:hover {
+  background: #54628f;
+}

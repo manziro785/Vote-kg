@@ -3,9 +3,11 @@ import img1 from "../../../assets/mainPage/banner/img_bg.svg";
 import img2 from "../../../assets/mainPage/banner/img_bg2.svg";
 import { useState, useEffect } from "react";
 import layout from "../../../styles/layout.module.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Banner() {
   const [activeBg, setActiveBg] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -46,8 +48,16 @@ export default function Banner() {
             мнения.
           </p>
           <div className={styles.buttons}>
-            <button className={styles.registerBtn}>Регистрация</button>
-            <button className={styles.loginBtn}>Вход</button>
+            <button
+              className={styles.registerBtn}
+              onClick={() => navigate("/register")}>
+              Регистрация
+            </button>
+            <button
+              className={styles.loginBtn}
+              onClick={() => navigate("/login")}>
+              Вход
+            </button>
           </div>
         </div>
       </div>

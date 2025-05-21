@@ -1,0 +1,10 @@
+@media screen and (max-width: 1024px) {
+  .regImg {
+    display: none;
+  }
+  .regPanel {
+    justify-self: center !important;
+    margin-right: 0 !important;
+    width: 80% !important;
+  }
+}

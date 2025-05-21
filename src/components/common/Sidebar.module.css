@@ -1,0 +1,166 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #25325c;
+  color: white;
+  border-right: 2px solid transparent;
+  width: 260px;
+  z-index: 1000;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.logo {
+  display: block;
+  z-index: 100;
+  padding: 4.5rem 3rem 3rem 3rem;
+  position: relative;
+}
+
+.rightSide {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 260px;
+  background: #25325c;
+}
+
+.logo a {
+  font-size: 2.35rem;
+  font-weight: 700;
+  z-index: 100;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btns ul {
+  list-style: none;
+  padding: 0;
+}
+
+.btns ul li {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.btns ul li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 0 1rem 2rem;
+  border-radius: 2px;
+  transition: background 0.3s;
+  font-size: 1.1rem;
+}
+
+.btns ul li a:hover {
+  background: #54628f33;
+}
+
+.btns ul li img {
+  padding-right: 15px;
+  width: 32px;
+  height: 32px;
+}
+
+.active {
+  background: #54628f;
+}
+
+.logoutBtn {
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  /* width: 100%; */
+  background: #e74d3c00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  border: 2px solid #c3c3c3;
+  padding: 1rem 5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1001;
+  margin: 0 1rem;
+}
+
+.logoutBtn:hover {
+  background: #8c8c8c22;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 70px;
+    min-width: 70px;
+  }
+  .logo {
+    padding: 2rem 0.5rem 1rem 0.5rem;
+  }
+  .logo a {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .btns ul li a {
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem 1rem 1rem;
+  }
+  .btns ul li img {
+    width: 24px;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 740px) {
+  .container {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+  }
+  .btns {
+    display: flex;
+  }
+  .btns ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .btns ul li {
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+  .logo {
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .btns ul li a {
+    padding: 0;
+  }
+  .active {
+    background: #2b303400;
+    border: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .btns ul li img {
+    display: none;
+  }
+  .btns ul li a {
+    font-size: 0.7rem !important;
+  }
+}
