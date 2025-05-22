@@ -8,6 +8,10 @@
   /* align-items: center; */
 }
 
+.posts {
+  padding-bottom: 2rem !important;
+}
+
 .card_user img {
   border-radius: 100%;
   width: 170px;

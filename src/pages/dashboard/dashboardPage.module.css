@@ -3,7 +3,7 @@
   padding: 60px;
   background: #eaeeff;
   box-shadow: 0 1px 4px #eaf0ff55;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .title,
