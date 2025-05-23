@@ -8,6 +8,8 @@ import ProfilePageOthers from "../pages/profiles/ProfilePageOthers/ProfilePageOt
 import CreatePosts from "../pages/createPosts/CreatePosts";
 import VerifyAdmin from "../pages/verifyAdmin/VerifyAdmin";
 import { ConfirmForm } from "../components/MultiStepAuth/forms/ConfirmForm";
+// import RegisterAdminPage from "../pages/authPages/registerAdminPage/RegisterAdminPage";
+
 export const routers = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +35,10 @@ export const routers = createBrowserRouter([
     path: "/create_posts",
     element: <CreatePosts />,
   },
+  // {
+  //   path: "/register_admin",
+  //   element: <RegisterAdminPage />,
+  // },
   {
     path: "/verify_admin",
     element: <VerifyAdmin />,

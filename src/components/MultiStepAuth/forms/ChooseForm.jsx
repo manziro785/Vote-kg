@@ -1,8 +1,15 @@
 import Radio from "@mui/material/Radio";
 import { FormWrapper } from "../FormWrapper.jsx";
-import { useState } from "react";
 
 export function ChooseForm({ setType, type, updateFields }) {
+  const handleTypeChange = (e) => {
+    const newType = e.target.value;
+    setType(newType);
+    if (updateFields) {
+      updateFields({ type: newType });
+    }
+  };
+
   return (
     <FormWrapper title="Этап 1">
       <div className="chsMain_block">
@@ -17,7 +24,7 @@ export function ChooseForm({ setType, type, updateFields }) {
           <div className="chsRadio">
             <Radio
               checked={type === "Student"}
-              onChange={(e) => setType(e.target.value)}
+              onChange={handleTypeChange}
               value="Student"
               required
               name="radio-buttons"
@@ -31,10 +38,12 @@ export function ChooseForm({ setType, type, updateFields }) {
                 flexDirection: "column",
                 alignItems: "start",
                 textAlign: "start",
-              }}>
+              }}
+            >
               <h2
                 className="chsBold"
-                style={{ fontSize: "1.2rem", margin: "0" }}>
+                style={{ fontSize: "1.2rem", margin: "0" }}
+              >
                 Гражданин
               </h2>
               <h3 className="chsNorm" style={{ fontSize: "1rem" }}>
@@ -46,7 +55,7 @@ export function ChooseForm({ setType, type, updateFields }) {
           <div className="chsRadio">
             <Radio
               checked={type === "Organization"}
-              onChange={(e) => setType(e.target.value)}
+              onChange={handleTypeChange}
               required
               value="Organization"
               name="radio-buttons"
@@ -60,10 +69,12 @@ export function ChooseForm({ setType, type, updateFields }) {
                 flexDirection: "column",
                 alignItems: "start",
                 textAlign: "start",
-              }}>
+              }}
+            >
               <h2
                 className="chsBold"
-                style={{ fontSize: "1.2rem", margin: "0" }}>
+                style={{ fontSize: "1.2rem", margin: "0" }}
+              >
                 Официальное лицо
               </h2>
               <h3 className="chsNorm" style={{ fontSize: "1rem" }}>
