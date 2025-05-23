@@ -6,7 +6,6 @@ import icon3 from "../../assets/mainPage/icons/icon3.svg";
 const Sidebar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const role = localStorage.getItem("role");
 
   const handleNavigation = (path) => {
     if (
@@ -41,20 +40,18 @@ const Sidebar = () => {
                 <img src={icon1} alt="" /> Главная
               </NavLink>
             </li>
-            {role === "ADMIN" && (
-              <li>
-                <NavLink
-                  to="/posts"
-                  className={({ isActive }) => (isActive ? style.active : "")}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavigation("/posts");
-                  }}
-                >
-                  <img src={icon1} alt="" /> Посты
-                </NavLink>
-              </li>
-            )}
+            {/* <li>
+            <NavLink
+              to="/posts"
+              className={({ isActive }) => (isActive ? style.active : "")}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation("/posts");
+              }}
+            >
+              <img src={icon2} alt="" /> Посты
+            </NavLink>
+          </li> */}
             <li>
               <NavLink
                 to="/profile"

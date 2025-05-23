@@ -1,9 +1,9 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import { ConfirmForm } from "./forms/ConfirmForm";
 import { ChooseForm } from "./forms/ChooseForm";
 import { useMultistepForm } from "./hook/useMultistepForm";
-import { UserForm } from "./forms/UserForm";
+import { UserForm, registerVoterUser } from "./forms/UserForm";
 import { Container } from "@mui/material";
 
 import "./MultiAuth.css";
@@ -15,6 +15,10 @@ function MultiStepAuth() {
   const [data, setData] = useState(INITIAL_DATA);
   const [dataOrg, setDataOrg] = useState(ORG_DATA);
   const [type, setType] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
   function updateFields(fields) {
     setData((prev) => {
       return { ...prev, ...fields };
@@ -34,18 +38,47 @@ function MultiStepAuth() {
         updateFields={updateFields}
       />,
       <UserForm
-        {...data}
-        {...dataOrg}
-        type={type}
-        updateFields={updateFields}
-        updateFieldsOrg={updateFieldsOrg}
+        onRegister={handleRegister}
+        loading={loading}
+        error={error}
+        success={success}
       />,
       <ConfirmForm {...data} updateFields={updateFields} />,
     ]);
 
+  async function handleRegister(form, setForm) {
+    setLoading(true);
+    setError("");
+    setSuccess("");
+    try {
+      console.log("[MultiStepAuth] handleRegister данные:", form);
+      await registerVoterUser(form);
+      setSuccess("Регистрация успешна!");
+      setForm({
+        name: "",
+        idPassport: "",
+        district: "",
+        dateOfBirth: "",
+        surname: "",
+        password: "",
+        email: "",
+        userUpsidePassportPhoto: null,
+        userImage: null,
+        userPassportPhoto: null,
+      });
+      next();
+    } catch (err) {
+      setError(err.message || "Ошибка регистрации");
+      console.error("[MultiStepAuth] Ошибка регистрации:", err);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   function onSubmit(e) {
     e.preventDefault();
     if (!isLastStep) return next();
+    // На последнем шаге ничего не делаем, регистрация уже была
     navigate("/main");
   }
 
@@ -61,17 +94,20 @@ function MultiStepAuth() {
                 style={{
                   backgroundColor:
                     currentStepIndex + 1 == 1 ? "#7C94C7" : "#35467a",
-                }}></div>
+                }}
+              ></div>
               <div
                 style={{
                   backgroundColor:
                     currentStepIndex + 1 == 2 ? "#7C94C7" : "#35467a",
-                }}></div>
+                }}
+              ></div>
               <div
                 style={{
                   backgroundColor:
                     currentStepIndex + 1 == 3 ? "#7C94C7" : "#35467a",
-                }}></div>
+                }}
+              ></div>
             </div>
             <div className="mainBlock_step">{step}</div>
           </div>

@@ -1,0 +1,139 @@
+.answerRow {
+  display: flex;
+}
+
+.container_dashboard {
+  width: 50%;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  /* background: #386dbc; */
+  padding-right: 1rem;
+}
+
+.form {
+  background: #eaeeff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #eaf0ff55;
+  padding: 36px 32px;
+  /* min-width: 600px; */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form h4 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column !important;
+  margin-bottom: 22px;
+}
+.field label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  /* color: #000; */
+}
+.field input[type="text"],
+.field textarea,
+.field select {
+  border: 2px solid #b2b9d2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  background: #fff;
+  margin-bottom: 0;
+  transition: border 0.2s;
+}
+
+.description {
+  width: 30px !important;
+  min-width: 400px !important;
+  min-height: 35px;
+}
+.field input[type="text"]:focus,
+.field textarea:focus,
+.field select:focus {
+  border: 2px solid #7c94c7;
+  outline: none;
+}
+
+.answers {
+  margin-bottom: 18px;
+}
+.answer {
+  background: #f3f6ff;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px #eaf0ff33;
+}
+.answer h5 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #25325c;
+}
+
+.fileBox {
+  border: 2px dashed #7c94c7;
+  border-radius: 8px;
+  background: #fff;
+  padding: 18px;
+  text-align: center;
+  color: #7c94c7;
+  margin: 1rem;
+  cursor: pointer;
+  transition: border 0.2s;
+  max-width: 200px;
+}
+.fileBox input[type="file"] {
+  display: none;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eaf0ff00;
+  color: #25325c;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 18px;
+  transition: background 0.2s;
+  margin: 0 auto;
+}
+.addBtn:hover {
+  background: #dbe6ff;
+}
+
+.submitBtn {
+  width: 100%;
+  background: #7c94c7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: background 0.2s;
+}
+.submitBtn:hover {
+  background: #54628f;
+}
+
+@media (max-width: 700px) {
+  .form {
+    padding: 18px 4px;
+    max-width: 100%;
+  }
+}

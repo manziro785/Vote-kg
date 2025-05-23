@@ -1,0 +1,71 @@
+.box {
+  border-radius: 10px;
+  padding: 60px;
+  background: #eaeeff;
+  box-shadow: 0 1px 4px #eaf0ff55;
+  margin-bottom: 2rem !important;
+}
+
+.card {
+  margin-bottom: 5rem;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.info > div {
+  margin-bottom: 20px;
+}
+
+.upTitle {
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  font-size: 16px;
+}
+
+.images > div {
+  margin-bottom: 2rem;
+}
+
+.value_img {
+  width: 100%;
+  height: 100%;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btns > div {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn_verify {
+  background: #7c94c7;
+  color: #fff;
+}
+
+.btn_reject {
+  background: #dc354600;
+  color: #7c94c7;
+  border: 2px solid #7c94c7;
+}
+
+.btn_verify:hover {
+  background: #6284cc;
+}
+
+.btn_reject:hover {
+  background: #7c94c753;
+}

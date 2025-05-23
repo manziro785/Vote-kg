@@ -8,6 +8,7 @@ import person_1 from "../../assets/person_1.svg";
 import plan from "../../assets/common/plan_img.svg";
 import like from "../../assets/common/like.svg";
 import dislike from "../../assets/common/Unlike.svg";
+import { NavLink } from "react-router-dom";
 
 export default function DashboardPage() {
   return (
@@ -45,7 +46,14 @@ export default function DashboardPage() {
                 </p>
                 <div className={style.actions}>
                   <div>Проголосовать</div>
-                  <div>Профиль</div>
+                  <div>
+                    <NavLink
+                      to="/profile_other"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Профиль
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </div>
@@ -63,7 +71,14 @@ export default function DashboardPage() {
                 </p>
                 <div className={style.actions}>
                   <div>Проголосовать</div>
-                  <div>Профиль</div>
+                  <div>
+                    <NavLink
+                      to="/profile_other"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Профиль
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </div>
